@@ -1,0 +1,23 @@
+{
+	"name":"Word Replacer",
+	"description" : "Changes Mr. Trump or Donald Trump to Crime Master Gogo",
+	"version": "1.0",
+	"manifest_version": 2,
+	
+	"browser_action":{
+		"default_icon":"images/16.png",
+		"default_popup":"popup.html"
+	},
+
+	"icons":{
+		"16":"images/16.png",
+		"48":"images/48.png",
+		"128":"images/128.png"
+	},
+	
+	"content_scripts":[{
+		"matches" : ["http://*/*", "https://*/*"],
+		"js":["content_script.js"],
+		"run_at" : "document_end"
+	}]
+}
